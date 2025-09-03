@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- MÉTA & SEO : titres, descriptions, réseaux sociaux (OG / Twitter), balise canonical -->
+
+  <title>Jeux Olympiques Paris 2024: Découvrez les Épreuves et Réservez vos Billets</title>
+  <meta name="description"
+    content="Bienvenue sur le site des Jeux Olympiques de Paris 2024. Découvrez les épreuves sportives, les lieux emblématiques et réservez vos billets en ligne dès maintenant.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo.webp" type="image/webp">
+
+  <!-- Styles personnalisés -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Framework CSS tiers -->
+  <!-- Feuille de style Bootstrap (via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Feuille de style pour bibliothèque Font Awesome (via CDN)-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- SEO & Partage social -->
+  <link rel="canonical" href="#">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Jeux Olympiques Paris 2024">
+  <meta property="og:description" content="Explorez les épreuves, réservez vos billets et vibrez au rythme des Jeux.">
+  <meta property="og:image"       content="img/logo.png">
+  <meta property="og:url"         content="#">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Jeux Olympiques Paris 2024">
+  <meta name="twitter:description" content="Toutes les disciplines, la billetterie et les infos officielles.">
+  <meta name="twitter:image"       content="img/logo.png">
+</head>
+
+<!-- Bannière cookies  -->
+<div id="cookie-banner" class="alert alert-info text-center fixed-bottom m-0" role="alert">
+  En poursuivant votre navigation, vous acceptez l’utilisation de cookies
+  pour la mesure d’audience. <button class="btn btn-custom btn-sm ms-2" data-bs-dismiss="alert">OK</button>
+</div>
+
+<body class="d-flex flex-column h-100">
+  <a href="#main" class="visually-hidden-focusable">Aller au contenu principal</a>
+
+  <!-- ZONE HEADER : logo + tagline. -->
+  <header class="container-fluid">
+    <a href="#"><img src="img/logo.png" alt="Logo Paris 2024"></a>
+    <h1>Vibrez au rythme des Jeux Olympiques de Paris 2024</h1>
+  </header>
+
+  <!-- Barre de navigation du site -->
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Navigation principale" data-bs-theme="dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="visually-hidden">Ouvrir ou fermer le menu principal</span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-3"><a class="nav-link active" aria-current="page" href="#">Accueil</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="http://localhost:5173/">Billetterie</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="#">Boutique</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <!-- MAIN : contenu éditorial. Chaque <section> = carte thématique-->
+      <main class="col-sm-12 col-lg-9">
+        <section class="card m-4 me-2 p-2" id="Presentation">
+          <img src="img/Celebration.png" class="card-img-top " loading="lazy">
+          <h2 class="card-title">Paris 2024 : Une célébration mondiale du sport</h2>
+          <p class="card-text">Du 26 juillet au 11 août 2024, Paris devient la capitale mondiale du sport en accueillant
+            les Jeux Olympiques pour la première fois depuis 1924.
+            Pendant 17 jours, plus de 10 000 athlètes venus de plus de 200 nations s’affronteront dans 32 disciplines,
+            dans un esprit de dépassement de soi, de fraternité et de paix.
+            Ces Jeux historiques seront organisés dans des lieux emblématiques de la capitale : une piste d’athlétisme
+            installée au pied de la Tour Eiffel, des épreuves équestres
+            dans les jardins du Château de Versailles, du beach-volley sur le Champ-de-Mars, et bien d’autres
+            expériences spectaculaires mêlant patrimoine et innovation.
+            Paris 2024 incarne une nouvelle ère olympique : plus durable, plus inclusive, plus inspirante. Que vous
+            soyez passionné de sport, curieux ou simplement en quête d’émotion,
+            vivez les Jeux au plus près !
+          </p>
+        </section>
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-sm-12 col-lg-6">
+              <article class="card p-1 h-100">
+                <img class="card-img-top" src="img/athletisme.png" loading="lazy"
+                  alt="Peinture de style impressionniste d'un sprinteur en compétition à Paris, avec la Tour Eiffel et des couleurs rappelant les anneaux olympiques dans le ciel.">
+                <div class="card-body">
+                  <h3 class="card-title">Athlétisme: Le cœur battant des Jeux</h3>
+                  <p class="card-text">
+                    L’athlétisme est l’épreuve reine des Jeux Olympiques, symbole de vitesse, de puissance et
+                    d’endurance.
+                    Sur la piste du Stade de France, les plus grands sprinteurs, sauteurs et lanceurs du monde
+                    s’affronteront pour la gloire olympique.
+                    Ne manquez pas les moments forts comme le 100 mètres, le saut en hauteur ou le relais 4x100m, où
+                    chaque seconde compte.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="btn btn-custom">Explorer la discipline</a>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <article class="card p-1 h-100">
+                <img class="card-img-top" src="img/Natation.png" loading="lazy"
+                  alt="Illustration d'un athlète nageant le crawl avec détermination, avec les anneaux olympiques et le logo de Paris 2024 visibles.">
+                <div class="card-body">
+                  <h3 class="card-title">Natation: Une course contre la montre</h3>
+                  <p class="card-text">
+                    Dans les bassins de la Paris La Défense Arena, les meilleurs nageurs et nageuses du globe
+                    s’élanceront pour conquérir les médailles
+                    les plus convoitées. L’épreuve de natation est un spectacle de technique et de puissance où chaque
+                    longueur peut créer une légende.
+                    Des épreuves individuelles aux relais, l’intensité sera au rendez-vous à chaque plongeon.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="btn btn-custom">Explorer la discipline</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row mt-4 gy-4">
+            <div class="col-sm-12 col-lg-6">
+              <article class="card p-1 h-100">
+                <img class="card-img-top" src="img/Escrime.png" loading="lazy"
+                  alt="Peinture d'un duel d'escrimeurs en compétition à Paris, se déroulant entre la Tour Eiffel et le dôme des Invalides sous une pluie de confettis.">
+                <div class="card-body">
+                  <h3 class="card-title">Escrime: L’élégance du duel</h3>
+                  <p class="card-text">Sport emblématique de la tradition française, l’escrime sera mise à l’honneur à
+                    Paris 2024. Dans une ambiance feutrée et tendue,
+                    sabreurs, fleurettistes et épéistes rivaliseront d’agilité, de tactique et de précision. Une
+                    discipline où chaque touche compte,
+                    rendant chaque assaut aussi intense qu’un duel de cinéma… mais bien réel.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="btn btn-custom">Explorer la discipline</a>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <article class="card p-1 h-100">
+                <img class="card-img-top" src="img/cyclisme.png" loading="lazy"
+                  alt="Peinture d'une course cycliste à Paris, montrant des coureurs devant la Tour Eiffel sous une pluie de confettis tricolores et devant le drapeau français.">
+                <div class="card-body">
+                  <h3 class="card-title">Cyclisme sur route: L’effort à ciel ouvert</h3>
+                  <p class="card-text">
+                    Les routes historiques de Paris et ses alentours serviront de décor aux courses de cyclisme sur
+                    route.
+                    Avec un départ spectaculaire au pied de la Tour Eiffel et une arrivée sur les Champs-Élysées,
+                    ces épreuves mêlent stratégie, résistance et bravoure. Un véritable marathon sur deux roues, où les
+                    plus grandes nations s’affrontent
+                    sur un terrain exigeant.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="btn btn-custom">Explorer la discipline</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- ASIDE : actualités & héritage. S'affiche après le contenu sur mobile -->
+      <aside class="col-sm-12 col-lg-3">
+        <section class="card mt-4 p-2" id="audela">
+          <h2 class="card-title">Au-delà des Jeux</h2>
+          <div class="card-body">
+              <p>
+                Les Jeux Olympiques et Paralympiques de Paris 2024 sont bien plus qu'un événement sportif.
+                C'est un projet de société qui vise à laisser une empreinte durable.
+                Découvrez ici les facettes moins visibles mais tout aussi importantes de cette édition historique.
+              </p>
+              <p>
+                <button class="btn btn-custom" type="button" data-bs-toggle="collapse" data-bs-target="#heritageAction"
+                  aria-expanded="false" aria-controls="heritageAction">
+                  En savoir plus sur l'héritage Culturelle
+                </button>
+              </p>
+              <div class="collapse mb-3" id="heritageAction">
+                <div class="card card-body">
+                  <h4>L'Héritage en Action</h4>
+                  <p>
+                    L'un des objectifs majeurs est de créer un héritage positif pour Paris et la Seine-Saint-Denis.
+                    Cela se traduit par des projets concrets :
+                  </p>
+                  <ul>
+                    <li><a
+                        href="https://www.olympics.com/fr/infos/jeux-de-paris-2024-chiffres-impressionnants-village-olympique-paralympique-athletes">Le
+                        Village des Athlètes :</a> Après les Jeux, il sera transformé en un quartier de vie durable avec des
+                      logements, des bureaux et des services publics pour les habitants locaux.</li>
+                    <li><a
+                        href="https://www.olympics.com/cio/news/la-durabilite-aux-jeux-de-paris-2024-tout-ce-que-vous-devez-savoir">Infrastructures
+                        durables :</a> Le Centre Aquatique Olympique à Saint-Denis et l'Arena La Chapelle à Paris sont des
+                      exemples d'équipements neufs conçus pour répondre aux besoins des clubs et des communautés après 2024.
+                    </li>
+                    <li><a
+                        href="https://www.ecologie.gouv.fr/presse/jop-2024-premiers-jeux-olympiques-paralympiques-entierement-cyclables">Mobilité
+                        douce :</a> 60 km de nouvelles pistes cyclables ont été créés pour relier les sites olympiques,
+                      encourageant une pratique du vélo qui perdurera.</li>
+                  </ul>
+                </div>
+              </div> 
+            <p>
+              <button class="btn btn-custom" type="button" data-bs-toggle="collapse" data-bs-target="#olympiadeCulturelle"
+                aria-expanded="false" aria-controls="olympiadeCulturelle">
+                En savoir plus sur l'Olympiade Culturelle
+              </button>
+            </p>
+            <div class="collapse mb-3" id="olympiadeCulturelle">
+              <div class="card card-body">
+                <h3>L'Olympiade Culturelle</h3>
+                <p>
+                  Les Jeux sont aussi une grande fête populaire ! <a
+                    href="https://presse.paris2024.org/assets/paris-2024-dp-olympiade-culturelle-04-2024-pdf-057b-e0190.html">'Olympiade
+                    Culturelle </a> est une programmation artistique et culturelle qui se déploie dans toute la France
+                  jusqu'à la fin des Jeux Paralympiques. Elle fait dialoguer l'art et le sport à travers des expositions,
+                  des spectacles, des concerts et des ateliers ouverts à tous. C'est l'occasion de célébrer la créativité
+                  et les valeurs communes.
+                </p>
+              </div>
+            </div>
+            <p>
+              <button class="btn btn-custom" type="button" data-bs-toggle="collapse" data-bs-target="#engagesInclusifs"
+                aria-expanded="false" aria-controls="engagesInclusifs">
+                En savoir plus sur engagés et inclusifs
+              </button>
+            </p>
+            <div class="collapse mb-3" id="engagesInclusifs">
+              <div class="card card-body">
+                <h3>Des Jeux Engagés et Inclusifs</h3>
+                <p>
+                  Paris 2024 se veut exemplaire sur le plan social et environnemental :
+                </p>
+                <ul>
+                  <li><a
+                      href="https://www.olympics.com/cio/news/genderequalolympics-la-parite-femmes-hommes-au-dela-de-l-aire-de-competition">Parité
+                      :</a> Pour la première fois dans l'histoire, il y aura une stricte parité entre les athlètes femmes
+                    et hommes.</li>
+                  <li><a
+                      href="https://www.olympics.com/cio/news/le-rapport-de-paris-2024-confirme-une-reduction-de-plus-de-50-des-emissions-de-carbone">Environnement
+                      :</a> L'objectif est de réduire de moitié l'empreinte carbone par rapport aux éditions précédentes,
+                    notamment en utilisant 95% de sites existants ou temporaires.</li>
+                  <li><a href="https://www.bl-evolution.com/enjeux-sociaux-societaux-jeux-olympiques/">Inclusion :</a> Un
+                    programme de 300 000 billets à 24€ et une billetterie populaire sont mis en place pour rendre les Jeux
+                    accessibles au plus grand nombre. Le Marathon Pour Tous permettra également au grand public de courir
+                    sur le même parcours que les athlètes olympiques.</li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              Cet encadré vous invite à voir au-delà des médailles, pour découvrir l'impact profond et positif de Paris
+              2024 sur la société.
+            </p>
+          </div>  
+        </section>
+        <section class="card ms-1 mt-4 p-2" id="faq">
+          <div class="card-body">
+            <h2 class="card-title">Foire Aux Questions - Paris 2024</h2>
+            <details>
+              <summary>Quelles sont les dates des Jeux Olympiques de Paris 2024 ?</summary>
+              <p>
+                Les Jeux Olympiques se tiendront du <strong>vendredi 26 juillet au dimanche 11 août 2024</strong>. Ils
+                seront suivis par les Jeux Paralympiques, qui auront lieu du 28 août au 8 septembre 2024.
+              </p>
+            </details>
+
+            <details>
+              <summary>Où se dérouleront les épreuves ?</summary>
+              <p>
+                Les compétitions auront lieu dans toute la France ! Si le cœur des Jeux bat à <strong>Paris et en
+                  Île-de-France</strong> (Stade de France, Roland-Garros, Champ de Mars, etc.), d'autres villes
+                accueilleront des épreuves : le football se jouera dans 6 autres villes, la voile à Marseille, et
+                l'épreuve de surf se tiendra sur la vague mythique de Teahupo'o, à <strong>Tahiti</strong>.
+              </p>
+            </details>
+
+            <details>
+              <summary>Y a-t-il de nouvelles disciplines au programme ?</summary>
+              <p>
+                Oui ! Le <strong>breaking</strong> (breakdance) fait sa grande entrée comme sport additionnel. C'est la
+                première fois qu'une discipline de danse-sport est au programme olympique. Les sports plus récents comme
+                le <strong>skateboard</strong>, l'<strong>escalade sportive</strong> et le <strong>surf</strong>, très
+                appréciés à Tokyo, sont également de retour.
+              </p>
+            </details>
+            <details>
+              <summary>Qu'est-ce qui rend ces Jeux si particuliers ?</summary>
+              <p>
+                Pour la première fois dans l'histoire, la cérémonie d'ouverture ne se déroulera pas dans un stade mais
+                <strong>en plein air, sur la Seine</strong>, au cœur de Paris. De plus, Paris 2024 vise à être les
+                premiers Jeux à <strong>parité totale</strong> entre athlètes femmes et hommes et s'engage pour un impact
+                environnemental réduit.
+              </p>
+            </details>
+            <details>
+              <summary>Comment suivre les compétitions ?</summary>
+              <p>
+                Pour ne rien manquer, vous pourrez suivre les épreuves en direct sur les chaînes du groupe <strong>France
+                  Télévisions</strong>, diffuseur officiel en France. Pour les résultats en temps réel, les programmes et
+                toutes les actualités, le site et l'application officiels de Paris 2024 seront vos meilleurs alliés.
+              </p>
+            </details>
+          </div>  
+        </section>
+      </aside>
+    </div>
+  </div>
+  <!-- FOOTER : liens rapides, billetterie, légal, réseaux sociaux -->
+  <footer class="container-fluid mt-4 pt-4">
+    <div class="row">
+      <div class="col-sm-12 col-lg-3">
+        <h3>Liens Rapides</h3>
+        <nav aria-label="Navigation pied de page pour liens rapides">
+          <ul class="list-unstyled">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Les Épreuves</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-sm-12 col-lg-3">
+        <h3>Billetterie</h3>
+        <nav aria-label="Navigation pied de page pour billetterie">
+          <ul class="list-unstyled">
+            <li><a href="#">Acheter des billets</a></li>
+            <li><a href="#">Mon Compte </a></li>
+            <li><a href="#">Mes Billets</a></li>
+            <li><a href="#">Offres et Hospitalités</a></li>
+            <li><a href="#">Aide & FAQ Billetterie</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-sm-12 col-lg-3">
+        <h3>Légal</h3>
+        <nav aria-label="Navigation pied de page pour légal">
+          <ul class="list-unstyled">
+            <li><a href="#">Mentions Légales</a></li>
+            <li><a href="#">Politique de Confidentialité</a></li>
+            <li><a href="#">Conditions d'Utilisation</a></li>
+            <li><a href="#">Gérer les Cookies</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-sm-12 col-lg-3">
+        <h3>Suivez-vous</h3>
+        <nav aria-label="Navigation pied de page pour les réseaux sociaux">
+          <ul class="d-flex justify-content-center list-unstyled">
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Facebook"><i class="me-3 fab fa-facebook-f"><span class="visually-hidden">Facebook — nouvelle fenêtre</span></i></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Instagram"><i class="me-3 fab fa-instagram"></i><span class="visually-hidden">Instagram — nouvelle fenêtre</span></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Twitter"><i class="me-3 fab fa-x-twitter"></i><span class="visually-hidden">Twitter — nouvelle fenêtre</span></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Tiktok"><i class="me-3 fab fa-tiktok"></i><span class="visually-hidden">Tiktok — nouvelle fenêtre</span></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Youtube"><i class="me-3 fab fa-youtube"></i><span class="visually-hidden">Youtube — nouvelle fenêtre</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <p class="text-center mt-4">
+      &copy;2025 Comité International Olympique. Tous droits réservés.
+    </p>
+    <p class="text-center">
+      Aucune partie de ce site ne peut être reproduite ou dupliquée sans l'autorisation expresse de moi.
+    </p>
+  </footer>
+
+      <!-- Script Bootstrap (JS + Popper) -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Script personnalisé -->
+      <script src="js/script.js"></script>
+</body>
+
+</html>

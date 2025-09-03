@@ -1,0 +1,49 @@
+.section-title {
+  margin-bottom: 3rem; 
+}
+
+/* --- Conteneur principal de la page "Mes Billets" --- */
+.mes-billets-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* --- Grille pour afficher les cartes de billets --- */
+.billets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem; 
+}
+
+/* --- Style de chaque carte de billet --- */
+.billet-card {
+  border-color: var(--couleur-primaire) !important;
+  box-shadow: var(--ombre-legere);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.billet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-elevation);
+}
+
+.billet-card .card-img-top {
+  border-bottom: transparent;
+  aspect-ratio: 1 / 1; 
+  object-fit: contain; 
+}
+
+.billet-card .card-title {
+  color: var(--couleur-primaire);
+  font-weight: bold;
+}
+
+.billet-card .card-footer {
+  background-color: transparent;
+  border-top: transparent;
+}
+
+/* --- Keyframe pour l'animation d'apparition --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

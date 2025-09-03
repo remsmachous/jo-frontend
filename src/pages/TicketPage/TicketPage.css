@@ -1,0 +1,49 @@
+/* --- Conteneur principal de la page ticket --- */
+.ticket-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* --- Cadre du QR Code --- */
+.qr-code-wrapper {
+    padding: 1rem;
+    border: 1px dashed var(--couleur-accent);
+    border-radius: var(--radius);
+    background-color: #f8f9fa;
+}
+
+/* --- Carte pour les détails du ticket --- */
+.ticket-card {
+    background-color: var(--blanc);
+    border: 1px solid var(--couleur-accent);
+    border-radius: var(--radius);
+    box-shadow: var(--ombre-legere);
+}
+
+.ticket-card .card-title {
+    background-color: var(--blanc);
+}
+
+.ticket-details {
+    padding: 1.5rem 2rem;
+}
+
+.ticket-details h5 {
+    color: var(--couleur-primaire);
+    border-bottom: 2px solid var(--couleur-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem !important; /* Important pour surcharger Bootstrap */
+}
+
+.ticket-details p {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Disposition sur les écrans plus larges --- */
+@media (min-width: 768px) {
+    .ticket-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}

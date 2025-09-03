@@ -1,0 +1,82 @@
+/* --- Conteneur principal de la page de réservation --- */
+.reservation-page-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+}
+
+/* --- Style commun pour les "cartes" de la page --- */
+.reservation-card {
+    background-color: var(--blanc);
+    border: 1px solid var(--couleur-accent);
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    box-shadow: var(--ombre-legere);
+}
+
+/* --- Titres de section --- */
+.reservation-page-container .reservation-section-title {
+    font-family: var(--font-titre);
+    color: var(--couleur-primaire);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* --- Style de la table de résumé --- */
+.reservation-page-container .reservation-summary-table th{
+    width: 100%;
+    color: var(--couleur-primaire);
+}
+
+.reservation-page-container .reservation-summary-table td {
+    color: var(--couleur-primaire);
+}
+
+.reservation-page-container .reservation-summary-table tfoot {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--couleur-primaire);
+}
+
+.reservation-page-container .reservation-form label {
+    color: var(--couleur-primaire);
+    font-weight: 700; 
+}
+
+/* --- Styles pour le formulaire --- */
+.reservation-form label {
+    color: var(--couleur-primaire);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.reservation-form input,
+.reservation-form textarea {
+    border-color: var(--couleur-accent);
+    color: var(--couleur-primaire);
+    font-weight: 500;
+}
+
+.reservation-form input:focus,
+.reservation-form textarea:focus {
+    color: var(--couleur-primaire);
+    border-color: var(--couleur-accent);
+    box-shadow: 0 0 0 0.25rem rgba(240, 155, 1, 0.5);
+    outline: none;
+}
+
+.reservation-form input::placeholder,
+.reservation-form textarea::placeholder, #placesHelp {
+    color: var(--couleur-primaire);
+    opacity: 0.5;
+}
+
+
+/* --- Disposition sur les écrans plus larges --- */
+@media (min-width: 992px) {
+    .reservation-page-container {
+        /* Deux colonnes : résumé et formulaire */
+        grid-template-columns: 40% 1fr;
+    }
+}

@@ -1,0 +1,116 @@
+/* --- Conteneur principal de la grille --- */
+.panier-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 3fr) 1fr 1.5fr 1fr auto;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+
+/* --- Style pour chaque ligne (article) et l'en-tête --- */
+.panier-item {
+  display: contents;
+  color: var(--couleur-primaire);
+}
+
+/* --- Style de l'en-tête --- */
+.panier-header {
+  font-weight: bold;
+  color: var(--couleur-primaire);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding-bottom: 0.5rem;
+}
+
+/* --- Le Total --- */
+.panier-total {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 3px solid var(--couleur-accent);
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--couleur-accent);
+}
+
+/* État par défaut des boutons */
+.btn-custom-cart {
+  color: var(--couleur-accent);
+  border-color:var(--couleur-accent);
+  background-color: transparent;
+  border-width: 0.15rem;
+  border-style: solid;
+  transition: all 0.2s ease-in-out;
+}
+
+/* État au survol de la souris*/
+.btn-custom-cart:hover,
+.btn-custom-cart:focus {
+  color: var(--blanc);
+  background-color: var(--couleur-accent);
+  border-color: var(--couleur-accent);
+  box-shadow: none;
+}
+
+/* État par défaut de l'input */
+.quantite-input{
+  border: 0.15rem solid var(--couleur-accent);
+  color: var(--couleur-primaire);
+  box-shadow: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* État lorsque l'input est sélectionné (focus) */
+.quantite-input:focus {
+    color: var(--couleur-primaire);
+    border-color: var(--couleur-accent);
+    box-shadow: 0 0 0 0.25rem rgba(240, 155, 1, 0.5);
+    outline: none;
+}
+
+/**
+ * --- STYLES RESPONSIVES (MOBILE) ---
+ */
+@media (max-width: 991px) {
+  .panier-grid {
+    display: block;
+  }
+
+  .panier-item {
+    display: block;
+    border: 1px solid var(--gris-clair);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .panier-item > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .panier-item > div:last-child {
+    border-bottom: none;
+  }
+
+  .panier-item > div::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: var(--couleur-primaire);
+  }
+
+  .panier-total {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .panier-header {
+    display: none;
+  }
+
+}

@@ -1,0 +1,45 @@
+/* --- Conteneur principal du Footer --- */
+.site-footer {
+  background-color: var(--couleur-primaire);
+  color: var(--blanc); 
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* --- Titres des colonnes --- */
+.site-footer-title {
+  color: var(--blanc);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* --- Listes de liens --- */
+.site-footer-link-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.site-footer-link-list a {
+  color: var(--blanc);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.site-footer-link-list a:hover {
+  color: var(--couleur-accent);
+}
+
+/* --- Section Copyright --- */
+.site-footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* --- Séparateur vertical pour les grands écrans --- */
+@media (min-width: 992px) {
+  .site-footer .col-lg-3:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.2); 
+  }
+}

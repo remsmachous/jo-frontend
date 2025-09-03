@@ -1,0 +1,47 @@
+/* --- Conteneur principal du résumé de panier --- */
+.panier-resume-container {
+  background-color: var(--couleur-primaire);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Titre "Panier (x)" --- */
+.panier-resume-titre {
+  color: var(--couleur-accent);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: none;
+}
+.panier-resume-titre::after {
+  display: none;
+}
+
+/* --- Chaque article dans la liste --- */
+.panier-resume-container .list-group .panier-resume-item {
+  background-color: var(--blanc) !important; 
+  color: var(--couleur-primaire);
+  font-weight: 500;
+  border-color: var(--couleur-accent) !important;
+}
+
+/* --- Badge de quantité/prix --- */
+.panier-resume-item .badge {
+  background-color: var(--couleur-accent);
+  color: var(--noir);
+  font-weight: bold;
+}
+
+/* --- Ligne du total --- */
+.panier-resume-total {
+  color: var(--couleur-accent);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--couleur-accent);
+  font-size: 1.3rem;
+  font-weight: 700;
+}

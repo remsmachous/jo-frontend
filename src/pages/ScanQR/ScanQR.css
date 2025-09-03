@@ -1,0 +1,132 @@
+.scan-page {
+  min-height: 100vh;
+  background: #f8f9fa; 
+  color: var(--noir); 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px;
+  font-family: var(--font-principale);
+}
+
+.scan-container {
+  width: 100%;
+  max-width: 480px;
+}
+
+
+.scan-notice {
+  background: #e9ecef; 
+  border: 1px solid var(--gris-clair);
+  color: var(--gris-fonce);
+  border-radius: var(--radius);
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.scan-reader-wrapper {
+  width: 100%;
+  background: var(--blanc);
+  border-radius: var(--radius);
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid var(--gris-clair);
+}
+
+.scan-status-card {
+  background: var(--blanc);
+  border: 1px solid var(--gris-clair);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--ombre-legere);
+}
+
+.scan-row {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.scan-label {
+  color: var(--gris-fonce);
+}
+
+.scan-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  background: #e9ecef;
+  color: var(--couleur-primaire);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.scan-info {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--gris-fonce);
+}
+
+.scan-result {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.scan-result-valid {
+  background-color: #d1e7dd; 
+  border: 1px solid #badbcc;
+  color: #0f5132;
+}
+
+.scan-result-invalid {
+  background-color: #f8d7da; 
+  border: 1px solid #f5c2c7;
+  color: #842029;
+}
+
+.scan-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.scan-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.scan-btn-primary {
+  flex: 1;
+  cursor: pointer;
+  padding: 10px 12px;
+  border: none;
+  border-radius: var(--radius);
+  color: var(--blanc);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  background-color: var(--couleur-accent); 
+}
+.scan-btn-primary:hover {
+  background-color: #FF5722;
+  transform: translateY(-2px);
+}
+
+
+.scan-btn-ghost {
+  flex: 1;
+  background: transparent;
+  border: 1px solid var(--gris);
+  color: var(--gris-fonce);
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+}
