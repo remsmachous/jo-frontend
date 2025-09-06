@@ -7,12 +7,12 @@ import { writeFile, mkdir } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname   = dirname(fileURLToPath(import.meta.url));
 const BACKEND_URL = (process.env.BACKEND_URL || "https://jobackend.fly.dev").replace(/\/+$/, "");
-const ENDPOINT = `${BACKEND_URL}/api/offers/`; 
+const ENDPOINT    = `${BACKEND_URL}/api/offers/`;
 
 const OUT_PATH = resolve(__dirname, "../src/data/offres.js");
-const OUT_DIR = dirname(OUT_PATH);
+const OUT_DIR  = dirname(OUT_PATH);
 
 function toAbs(url) {
   if (!url) return "";
@@ -20,7 +20,12 @@ function toAbs(url) {
   if (url.startsWith("/")) return `${BACKEND_URL}${url}`;
   return `${BACKEND_URL}/${url}`;
 }
-function js(v) { return JSON.stringify(v ?? "", null, 0); }
+const js = (v) => JSON.stringify(v ?? "", null, 0);
+
+function pick(obj, ...keys) {
+  for (const k of keys) if (obj?.[k] != null) return k;
+  return null;
+}
 
 function groupByCategory(items) {
   const buckets = { solo: [], duo: [], famille: [] };
@@ -32,16 +37,30 @@ function groupByCategory(items) {
 }
 
 function serializeItem(o) {
-  const image = toAbs(o.image_url || o.image || "");
-  const alt = o.alt ?? "";
-  const titre = (o.titre || o.name || "").trim();
-  const description = (o.description || "").trim();
-  const prix = Number(o.price ?? 0);
-  const btnLabel = (o.btnLabel || "Ajouter au panier").trim();
-  const btnHref = "/reservation";
+  // Image 
+  const rawImg = o.image_url ?? o.image ?? o.thumbnail ?? o.picture ?? o.poster ?? null;
+  const image  = toAbs(rawImg);
 
+  // ALT 
+  const altKey = pick(o, "alt", "texte_alternatif", "texteAlternatif", "alternative_text", "alternativeText");
+  const alt    = (altKey ? String(o[altKey]) : "") || (o.name ?? "Visuel de l'offre");
+
+  // Titre 
+  const titreKey = pick(o, "name", "Name", "nom");
+  const titre    = (titreKey ? String(o[titreKey]) : "Offre").trim();
+
+  // Label du bouton 
+  const btnLabel = String(o.titre ?? o.buttonLabel ?? "Ajouter au panier").trim();
+
+  const description = String(o.description ?? o.short_description ?? "").trim();
+
+  // Prix en nombre 
+  const prix = Number(o.price ?? 0);
+
+  const btnHref = "/reservation"; 
   return `{ image: ${js(image)}, alt: ${js(alt)}, titre: ${js(titre)}, description: ${js(description)}, prix: ${prix}, btnLabel: ${js(btnLabel)}, btnClass: BTN_CLASS, btnHref: ${js(btnHref)} }`;
 }
+
 function serializeList(arr) {
   return "[\n  " + arr.map(serializeItem).join(",\n  ") + (arr.length ? "\n" : "") + "]";
 }
@@ -52,7 +71,7 @@ async function main() {
     const t = await res.text().catch(() => "");
     throw new Error(`Échec GET ${ENDPOINT} -> ${res.status} ${res.statusText} ${t}`);
   }
-  const data = await res.json();
+  const data   = await res.json();
   const offers = Array.isArray(data) ? data : (data?.results ?? []);
 
   const { solo = [], duo = [], famille = [] } = groupByCategory(offers);
