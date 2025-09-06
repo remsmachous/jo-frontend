@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build:offres && vite build",
     "lint": "eslint .",
-    "preview": "vite preview --port 8080"
+    "preview": "vite preview --port 8080",
+    "build:offres": "node scripts/build_offres_js.mjs"
   },
   "dependencies": {
     "bootstrap": "^5.3.7",
