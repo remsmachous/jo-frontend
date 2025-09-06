@@ -1,7 +1,7 @@
 /* --- Style du conteneur principal de l'en-tête --- */
 .site-header {
   height: 40vh;
-  background: url('/img/ban.png') no-repeat scroll center / cover;
+  background: url('/src/assets/ban.png') no-repeat scroll center / cover;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: repeat(12, 1fr);
