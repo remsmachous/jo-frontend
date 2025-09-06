@@ -2,7 +2,8 @@
   "version": 2,
   "builds": [{ "src": "package.json", "use": "@vercel/static-build" }],
   "routes": [
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "handle": "filesystem" },
+    { "src": "/accueil\\.html", "dest": "/accueil.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
