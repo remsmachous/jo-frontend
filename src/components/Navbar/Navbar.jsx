@@ -50,7 +50,7 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="mainNav">
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item mx-3">
-              <a className="nav-link" href="index.html">Accueil</a>
+              <a className="nav-link" href="/accueil.html">Accueil</a>
             </li>
             <li className="nav-item mx-3">
               <NavLink className="nav-link" to="/">Billetterie</NavLink>
