@@ -18,7 +18,7 @@ export default function Header() {
     return (
         <header className="site-header">
             <Link to="/" className="site-header-logo">
-                <img src="/public/img/logo.png" alt="Logo Paris 2024" />
+                <img src="src/public/img/logo.png" alt="Logo Paris 2024" />
             </Link>
             <h1 className="site-header-title">
                 Partagez l’aventure olympique : réservez vos billets dès maintenant
