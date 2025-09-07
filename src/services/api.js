@@ -139,7 +139,7 @@ export async function getTicket(id) {
 }
 
 export async function getMyTickets() {
-  const out = await apiFetch("/api/my-tickets");
+  const out = await apiFetch("/api/my-tickets/");
   return Array.isArray(out) ? out : (out?.results ?? []);
 }
 
