@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 // --- Contexte & Hooks Personnalisés de l'Application ---
 import { useAuth } from "../../auth/AuthContext.jsx";
-import { getAccessToken, getMyTickets } from "././services/api";
+import { getAccessToken, getMyTickets } from "../../services/api";
 
 // --- CSS ---
 import './MesBillets.css'
