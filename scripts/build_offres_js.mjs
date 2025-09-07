@@ -37,28 +37,22 @@ function groupByCategory(items) {
 }
 
 function serializeItem(o) {
+  // ID  panier
+  const id = o.id ?? o.slug ?? null;               
   // Image 
-  const rawImg = o.image_url ?? o.image ?? o.thumbnail ?? o.picture ?? o.poster ?? null;
-  const image  = toAbs(rawImg);
-
+  const image = toAbs(o.image_url || o.image || "");
   // ALT 
-  const altKey = pick(o, "alt", "texte_alternatif", "texteAlternatif", "alternative_text", "alternativeText");
-  const alt    = (altKey ? String(o[altKey]) : "") || (o.name ?? "Visuel de l'offre");
-
+  const alt = o.alt ?? "";
   // Titre 
-  const titreKey = pick(o, "name", "Name", "nom");
-  const titre    = (titreKey ? String(o[titreKey]) : "Offre").trim();
-
-  // Label du bouton 
-  const btnLabel = String(o.titre ?? o.buttonLabel ?? "Ajouter au panier").trim();
-
-  const description = String(o.description ?? o.short_description ?? "").trim();
-
+  const titre = (o.name || o.titre || "").trim();  
+  const description = (o.description || "").trim();
   // Prix en nombre 
   const prix = Number(o.price ?? 0);
+  // Label du bouton 
+  const btnLabel = (o.btnLabel || "Ajouter au panier").trim();
+  const btnHref = "/reservation";
 
-  const btnHref = "/reservation"; 
-  return `{ image: ${js(image)}, alt: ${js(alt)}, titre: ${js(titre)}, description: ${js(description)}, prix: ${prix}, btnLabel: ${js(btnLabel)}, btnClass: BTN_CLASS, btnHref: ${js(btnHref)} }`;
+  return `{ id: ${js(id)}, image: ${js(image)}, alt: ${js(alt)}, titre: ${js(titre)}, description: ${js(description)}, prix: ${prix}, btnLabel: ${js(btnLabel)}, btnClass: BTN_CLASS, btnHref: ${js(btnHref)} }`;
 }
 
 function serializeList(arr) {
