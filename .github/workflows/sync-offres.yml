@@ -1,0 +1,58 @@
+name: Sync offres.js depuis le backend
+
+on:
+  workflow_dispatch: {}
+
+  schedule:
+    - cron: "0 */2 * * *"
+
+  repository_dispatch:
+    types: [offres_updated]
+
+permissions:
+  contents: write   
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build offres.js depuis le backend
+        env:
+          BACKEND_URL: ${{ secrets.BACKEND_URL }}
+        run: |
+          # Affiche l’URL utilisée (debug)
+          echo "Backend = ${BACKEND_URL:-https://jobackend.fly.dev}"
+          node scripts/build_offres_js.mjs
+
+      - name: Vérifier s'il y a des changements
+        id: git_status
+        run: |
+          if git diff --quiet -- src/data/offres.js; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit & push si modifié
+        if: steps.git_status.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/offres.js
+          git commit -m "chore: sync offres.js depuis backend [skip ci]"
+          git push
