@@ -138,6 +138,11 @@ export async function getTicket(id) {
   return apiFetch(`/api/tickets/${id}`); // => { id, reservation_id, qr_url, created_at }
 }
 
+export async function getMyTickets() {
+  const out = await apiFetch("/api/my-tickets");
+  return Array.isArray(out) ? out : (out?.results ?? []);
+}
+
 export async function verifyToken(tokenOrQr) {
   const body =
     (tokenOrQr || "").startsWith("jo://ticket/")

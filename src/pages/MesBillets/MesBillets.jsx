@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 // --- Contexte & Hooks Personnalisés de l'Application ---
 import { useAuth } from "../../auth/AuthContext.jsx";
-import { getAccessToken } from "../../services/api";
+import { getAccessToken, getMyTickets } from "././services/api";
 
 // --- CSS ---
 import './MesBillets.css'
@@ -37,26 +37,16 @@ export default function MesBillets() {
           return;
         }
 
-        const res = await fetch("http://127.0.0.1:8000/api/my-tickets/", {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: "application/json",
-          },
-        });
-
-        const data = await res.json();
+        const list = await getMyTickets(); // <-- utilise l’API centralisée
         if (!alive) return;
-        setTickets(Array.isArray(data?.results) ? data.results : []);
+        setTickets(list);
       } finally {
         if (alive) setLoading(false);
       }
     }
 
     run();
-    return () => {
-      alive = false;
-    };
+    return () => { alive = false; };
   }, []);
 
   if (loading) {
