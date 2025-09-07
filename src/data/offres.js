@@ -1,7 +1,7 @@
 /**
  * ⚠️ FICHIER GÉNÉRÉ AUTOMATIQUEMENT — NE PAS ÉDITER
  * Source: https://jobackend.fly.dev/api/offers/
- * Généré: 2025-09-07T04:28:38.272Z
+ * Généré: 2025-09-07T05:16:48.383Z
  */
 
 const BTN_CLASS = "btn btn-custom";
@@ -9,7 +9,7 @@ const BTN_CLASS = "btn btn-custom";
 export const offresSolo = [
   { image: "https://jobackend.fly.dev/media/offres/athletisme.png", alt: "Affiche des JO de Paris 2024 pour l'épreuve d'athlétisme, montrant un coureur en pleine action sur une piste.", titre: "Pack Solo: Athlétisme", description: "1 place en catégorie A pour la mythique finale du 100m masculin.", prix: 90, btnLabel: "Acheter ce bille", btnClass: BTN_CLASS, btnHref: "/reservation" },
   { image: "https://jobackend.fly.dev/media/offres/basket.jpg", alt: "Affiche des JO de Paris 2024 pour le basketball, avec un joueur dribblant sur un terrain.", titre: "Pack Solo: Basketball", description: "1 billet pour un match des phases finales de basketball à l'Accor Arena.", prix: 75, btnLabel: "Dunker sa place", btnClass: BTN_CLASS, btnHref: "/reservation" },
-  { image: "https://jobackend.fly.dev/media/offres/skateboard.jpeg", alt: "Affiche des JO de Paris 2024 pour le skateboard, représentant un athlète réalisant une figure devant la Tour Eiffel.", titre: "Pack Solo: Skateboard", description: "1 billet pour les qualifications de Skateboard Park à la Concorde.", prix: 80, btnLabel: "Réserver ma place", btnClass: BTN_CLASS, btnHref: "/reservation" }
+  { image: "https://jobackend.fly.dev/media/offres/bmx.jpg", alt: "Affiche des JO de Paris 2024 pour le skateboard, représentant un athlète réalisant une figure devant la Tour Eiffel.", titre: "Pack Solo: Skateboard", description: "1 billet pour les qualifications de Skateboard Park à la Concorde.", prix: 80, btnLabel: "Réserver ma place", btnClass: BTN_CLASS, btnHref: "/reservation" }
 ];
 
 export const offresDuo = [
