@@ -1,7 +1,7 @@
 /**
  * ⚠️ FICHIER GÉNÉRÉ AUTOMATIQUEMENT — NE PAS ÉDITER
  * Source: https://jobackend.fly.dev/api/offers/
- * Généré: 2025-09-22T12:50:56.486Z
+ * Généré: 2025-09-22T14:25:01.374Z
  */
 
 const BTN_CLASS = "btn btn-custom";
